@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Handlee&family=Lobster+Two&family=Murecho&family=Noto+Sans:wght@900&family=Paytone+One&family=Philosopher&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Creepster&family=Handlee&family=Lobster+Two&family=Murecho&family=Noto+Sans:wght@900&family=Paytone+One&family=Philosopher&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Creepster&family=Handlee&family=Lobster+Two&family=Murecho&family=Noto+Sans:wght@900&family=Paytone+One&family=Philosopher&family=Special+Elite&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    pad: 0;
+}
+
+body {
+    color: white;
+    overflow: hidden;
+}
+
+.heading {
+    /* padding: 38px 31%; */
+    font-size: 46px;
+    font-family: 'Creepster', cursive;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.gameContainer {
+    background-color: red;
+    background: url('bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    /*this is the size of background image*/
+    width: 100vw;
+    height: 200vh;
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 12px;
+    /* margin-top: 32px; */
+}
+
+.score {
+    font-family: 'Philosopher', sans-serif;
+    padding: 12px 12px;
+    margin: auto;
+    font-size: 24px;
+    border: 2px solid #325626;
+    border-style: inset;
+    box-shadow: 6px 3px 7px #2c482c;
+
+}
+
+.dragon {
+    background-image: url(dragon.png);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    position: absolute;
+    width: 209px;
+    height: 181px;
+    bottom: 0;
+    /* left: 102px; */
+    right: 33px;
+}
+
+.Player {
+    background-image: url('/Player.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 214px;
+    height: 168px;
+    bottom: 0px;
+}
+
+.gameOver {
+    visibility: hidden;
+    background-image: linear-gradient(-3deg, #400202, black);
+    border: 1px solid #360202;
+    font-size: 101px;
+    font-family: 'Special Elite', cursive;
+    object-fit: center;
+    display: flex;
+    margin: 166px 229px;
+    padding: 21px 31px;
+    border-top: #050000;
+    animation: animateZoom 4s;
+
+}
+
+@keyframes animateZoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.animatedPlayer {
+    animation: animate 0.6s linear;
+}
+
+@keyframes animate {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 300px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.animatedDragon {
+    animation: aniDragon 2.0s linear infinite;
+    /* must mention infinite for continous animation*/
+}
+
+@keyframes aniDragon {
+
+    /* Also we have to make a class for aniDragon*/
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -10vw;
+    }
+}
